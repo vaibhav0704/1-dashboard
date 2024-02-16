@@ -3,5 +3,5 @@
 ## Run Project in Dev Mode?
 
 ```bash
-$ docker compouse up
+$ docker compose up
 ```
