@@ -2,32 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-text-base: 0, 0, 0;
+    --color-text-status: 124, 124, 124;
+    --color-text-link: 67, 117, 251;
+    --color-text-fill: 242, 242, 242;
+    --color-background-box: 255, 255, 255;
+    --color-background-accent: 217, 217, 217;
+    --color-button-fill: 67, 117, 251;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer components {
+  .sidebar-text {
+    @apply text-skin-base opacity-30 text-[18px] font-[300] p-0 m-0
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .sidebar-text-focus {
+    @apply text-skin-base opacity-100 text-[18px] font-[700] p-0 m-0
+  }
+
+  .button-blue {
+    @apply bg-skin-fill h-[52px] flex justify-center items-center
+  }
+
+  .body-box {
+    @apply flex justify-between p-[50px] items-center bg-skin-background-box
   }
 }
