@@ -16,6 +16,9 @@ const Dashboard: React.FC<Props> = () => {
 
       <div className="h-[107px] body-box p-[60px]">
         <p className='text-skin-base font-[700] text-[32px]'>Choose your new site</p>
+        <div className=''>
+          
+        </div>
       </div>
     </div>
   )
