@@ -1,7 +1,5 @@
-import type { Config } from "tailwindcss";
-
-function withOpacityValue(variableName: string) {
-  return ({ opacityValue }: { opacityValue: any }) => {
+function withOpacityValue(variableName) {
+  return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
       return `rgba(var(${variableName}), ${opacityValue})`
     }
@@ -9,7 +7,7 @@ function withOpacityValue(variableName: string) {
   }
 }
 
-const config: Config = {
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
